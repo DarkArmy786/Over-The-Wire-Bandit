@@ -1,11 +1,13 @@
-# Over-The-Wire-Bandit
+# Over-The-Wire-Bandit ( Level 1-10 )
 This repository contains a step-by-step guide for solving levels 0 through 10 of the Bandit wargame from OverTheWire. Each level includes commands, explanations, and tips to help beginners understand Linux basics and cybersecurity principles.
 
-Bandit Level 0 → Level 1
+
+# Bandit Level 0 → Level 1
+ssh bandit0@bandit.labs.overthewire.org -p 2220
 Key Takeaways: learn how to log into a server using SSH from a command-line terminal.
 The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game. 
 
-ssh bandit0@bandit.labs.overthewire.org -p 2220
+
 
 File: readme
 Password for Level 1: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
@@ -15,7 +17,8 @@ Password for Level 1: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 ![image](https://github.com/user-attachments/assets/aca1c942-ad7e-4f1c-b751-f405a028817b)
 
 
-Bandit Level 1 → Level 2
+# Bandit Level 1 → Level 2
+ssh bandit1@bandit.labs.overthewire.org -p 2220
 Key Takeaways: learn how to read files with special characters, which is "-" in this case.
 The - is not treated as a filename. In Unix/Linux commands, a single dash - usually means:
 “Read from standard input (keyboard) instead of a file.”
@@ -31,7 +34,7 @@ cat ./-
 "-" is now treated as a filename, not an option
 
 The password for the next level is stored in a file called - located in the home directory.
-ssh bandit1@bandit.labs.overthewire.org -p 2220
+
 
 File: -
 Password for Level 2: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
@@ -39,4 +42,20 @@ Password for Level 2: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
 ![image](https://github.com/user-attachments/assets/b4386e01-40cf-41b8-a36e-f51cdbca80cd)
 
 ![image](https://github.com/user-attachments/assets/42283942-5259-4dcc-9e71-3846c9f1b068)
+
+
+# Bandit Level 2 → Level 3
+ssh bandit2@bandit.labs.overthewire.org -p 2220
+Key Takeaways: learn how to read files with spaces in its file name.
+The password for the next level is stored in a file called spaces in this filename located in the home directory.
+
+
+Command: cat spaces\ in\ this\ filename
+Alternatives: cat "spaces in this filename"
+File: spaces in this filename
+Password for Level 3: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+![image](https://github.com/user-attachments/assets/21b273cf-c186-423c-91bf-8bedff308445)
+
+![image](https://github.com/user-attachments/assets/8a978dd4-4562-4147-894d-69635dea52b7)
 
