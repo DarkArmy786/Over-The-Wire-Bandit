@@ -27,13 +27,16 @@ When the file is literally named -, you need to tell Linux:
 So you use:
 cat ./-
 ./ means: “in the current directory”
-- is now treated as a filename, not an option
+
+"-" is now treated as a filename, not an option
 
 The password for the next level is stored in a file called - located in the home directory.
 ssh bandit1@bandit.labs.overthewire.org -p 2220
 
 File: -
-Password for Level 2: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+Password for Level 2: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
 
 ![image](https://github.com/user-attachments/assets/b4386e01-40cf-41b8-a36e-f51cdbca80cd)
+
+![image](https://github.com/user-attachments/assets/42283942-5259-4dcc-9e71-3846c9f1b068)
 
