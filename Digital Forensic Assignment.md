@@ -131,6 +131,88 @@ Password for Level 6: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 ![image](https://github.com/user-attachments/assets/57e067fe-19ef-42fe-90f5-7d95f92d3ccd)
 
 
+# Bandit Level 6 → Level 7
+
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+
+Password for Level 6: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+Key Takeaways: learn how to find a targeted file given a set of properties, by using the find command (similar to previous one, except with a different set of search criteria).
+The password for the next level is stored somewhere on the server and has all of the following properties: owned by user bandit7
+owned by group bandit6
+33 bytes in size
+
+Note: Since it is stated that the password is stored somewhere on the server, we must first navigate to the root folder. cd .. twice from the home directory, and then pwd to verify that we are in the root directory. We should only see the slash ('/') character from running pwd.
+Command: find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+Note: There are a lot of files which match the given property, but all of these files (except one) cannot be accessed, as seen from the string of "Permission denied" messages displayed. Only one search result does not have this message.
+File: ./var/lib/dpkg/info/bandit7.password
+Password for Level 7: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+![image](https://github.com/user-attachments/assets/8590792d-6cb9-424a-866d-b43be8292f92)
+
+
+# Bandit Level 7 → Level 8
+
+ssh bandit7@bandit.labs.overthewire.org -p 2220
+Password for Level 7: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+
+Key Takeaways: learn how to search for a specific word within a file, by using the grep command.
+The password for the next level is stored in the file data.txt next to the word millionth.
+
+Command: grep millionth data.txt
+File: data.txt
+Password for Level 8:dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+![image](https://github.com/user-attachments/assets/a318795d-409e-4bf7-a0c3-8b8e530465f5)
+
+
+# Bandit Level 8 → Level 9
+ssh bandit8@bandit.labs.overthewire.org -p 2220
+Password for Level 8:dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+Key Takeaways: learn how to search within a file given a set of criteria, by using the sort and uniq commands, in addition to piping within the terminal.
+The password for the next level is stored in the file data.txt and is the only line of text that occurs only once.
+
+Command: cat data.txt | sort | uniq -u
+Note: -u argument indicates to print only the unique lines.
+File: data.txt
+Password for Level 9: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+![image](https://github.com/user-attachments/assets/b0d8bb1e-a7fb-4da9-8949-874313141675)
+
+
+# Bandit Level 9 → Level 10
+
+ssh bandit9@bandit.labs.overthewire.org -p 2220
+Password for Level 9: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+Key Takeaways: learn how to search for strings within a file that does not contain only ASCII characters, by using the strings and grep command.
+The password for the next level is stored in the file data.txt in one of the few human-readable strings, beginning with several ‘=’ characters.
+
+Note: file data.txt tells us that the file is a data file, and does not contain only ASCII text. Hence, it was mentioned that there are only a few human-readable strings.
+Command: strings data.txt | grep ===
+File: data.txt
+Password for Level 10:FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+![image](https://github.com/user-attachments/assets/3f6e115e-15cb-4cea-9fbc-722b4fd253b6)
+
+
+
+# Bandit Level 10 → Level 11
+
+ssh bandit10@bandit.labs.overthewire.org -p 2220
+Password for Level 10:FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+Key Takeaways: learn how to decode base64 encoded data, using the base64 command.
+The password for the next level is stored in the file data.txt, which contains base64 encoded data.
+
+Command: base64 -d data.txt
+Note: -d argument indicates decoding of data.
+File: data.txt
+Password for Level 11:dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr 
+
+![image](https://github.com/user-attachments/assets/53f25800-bb7f-478e-aa27-86e7b41add2d)
 
 
 
