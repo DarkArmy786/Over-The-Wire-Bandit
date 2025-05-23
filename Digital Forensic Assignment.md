@@ -1,4 +1,5 @@
-# Over-The-Wire-Bandit ( Level 1-10 )
+# Over-The-Wire-Bandit ( Level 1-10 ) By Waqas Maqsood
+
 This repository contains a step-by-step guide for solving levels 0 through 10 of the Bandit wargame from OverTheWire. Each level includes commands, explanations, and tips to help beginners understand Linux basics and cybersecurity principles.
 
 
@@ -135,6 +136,7 @@ Password for Level 6: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
 ssh bandit6@bandit.labs.overthewire.org -p 2220
 
+
 Password for Level 6: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
 Key Takeaways: learn how to find a targeted file given a set of properties, by using the find command (similar to previous one, except with a different set of search criteria).
@@ -154,6 +156,7 @@ Password for Level 7: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 # Bandit Level 7 → Level 8
 
 ssh bandit7@bandit.labs.overthewire.org -p 2220
+
 Password for Level 7: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
 
@@ -169,6 +172,7 @@ Password for Level 8:dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 
 # Bandit Level 8 → Level 9
 ssh bandit8@bandit.labs.overthewire.org -p 2220
+
 Password for Level 8:dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 
 Key Takeaways: learn how to search within a file given a set of criteria, by using the sort and uniq commands, in addition to piping within the terminal.
@@ -185,6 +189,7 @@ Password for Level 9: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 # Bandit Level 9 → Level 10
 
 ssh bandit9@bandit.labs.overthewire.org -p 2220
+
 Password for Level 9: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 
 Key Takeaways: learn how to search for strings within a file that does not contain only ASCII characters, by using the strings and grep command.
@@ -202,6 +207,7 @@ Password for Level 10:FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
 # Bandit Level 10 → Level 11
 
 ssh bandit10@bandit.labs.overthewire.org -p 2220
+
 Password for Level 10:FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
 
 Key Takeaways: learn how to decode base64 encoded data, using the base64 command.
