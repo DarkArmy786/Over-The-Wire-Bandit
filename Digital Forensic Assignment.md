@@ -1,45 +1,39 @@
 # Over-The-Wire-Bandit
 This repository contains a step-by-step guide for solving levels 0 through 10 of the Bandit wargame from OverTheWire. Each level includes commands, explanations, and tips to help beginners understand Linux basics and cybersecurity principles.
 
-🧭 Goal
-Log in to the game server to begin playing Bandit Level 0.
+Bandit Level 0 → Level 1
+Key Takeaways: learn how to log into a server using SSH from a command-line terminal.
+The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game. 
 
-✅ Required Info
-Hostname: bandit.labs.overthewire.org
-
-Port: 2220
-
-Username: bandit0
-
-Password: bandit0
-
-💻 Steps to Connect (on Linux/macOS/Kali/WSL)
-Open your terminal.
-
-Run the SSH command:
-
-bash
-Copy
-Edit
 ssh bandit0@bandit.labs.overthewire.org -p 2220
-When prompted for the password, type:
 
-nginx
-Copy
-Edit
-bandit0
-⚠️ Note: You won’t see the password as you type — this is normal.
+File: readme
+Password for Level 1: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 
-📘 Next Step After Login
-After successful login, you’ll see a welcome message.
-Now type:
+![image](https://github.com/user-attachments/assets/3494c7ee-1db2-413f-9d8c-dd7874c5ac61)
 
-bash
-Copy
-Edit
-ls
-To list files and follow instructions in the readme file.
+![image](https://github.com/user-attachments/assets/aca1c942-ad7e-4f1c-b751-f405a028817b)
 
-Then proceed to Level 1.
 
-![image](https://github.com/user-attachments/assets/3866d3e8-d93f-44f9-bdcc-48054fb3d35b)
+Bandit Level 1 → Level 2
+Key Takeaways: learn how to read files with special characters, which is "-" in this case.
+The - is not treated as a filename. In Unix/Linux commands, a single dash - usually means:
+“Read from standard input (keyboard) instead of a file.”
+So cat - waits for you to type something instead of reading a file.
+
+When the file is literally named -, you need to tell Linux:
+"Don't treat this as an option or stdin, treat it as a file."
+
+So you use:
+cat ./-
+./ means: “in the current directory”
+- is now treated as a filename, not an option
+
+The password for the next level is stored in a file called - located in the home directory.
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+
+File: -
+Password for Level 2: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+![image](https://github.com/user-attachments/assets/b4386e01-40cf-41b8-a36e-f51cdbca80cd)
+
