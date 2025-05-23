@@ -7,3 +7,5 @@ The password for the next level is stored in a file called readme located in the
 
 File: readme
 Password for Level 1: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+![image](https://github.com/user-attachments/assets/3866d3e8-d93f-44f9-bdcc-48054fb3d35b)
